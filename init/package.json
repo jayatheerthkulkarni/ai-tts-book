@@ -1,0 +1,24 @@
+{
+  "name": "ai-tts-book",
+  "version": "1.0.0",
+  "main": "init.js",
+  "type": "module",
+  "scripts": {
+    "test": "bun init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayatheerthkulkarni/ai-tts-book.git"
+  },
+  "author": "Jayatheerth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jayatheerthkulkarni/ai-tts-book/issues"
+  },
+  "homepage": "https://github.com/jayatheerthkulkarni/ai-tts-book#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
