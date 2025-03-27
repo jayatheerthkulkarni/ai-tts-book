@@ -20,14 +20,17 @@ const port = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, '../client')));
 
-app.get("/", (req, res) =>{
-    res.sendFile(path.join(client_dir, "/test.html"));
+app.get("/home", (req, res) =>{
+    res.sendFile(path.join(client_dir, "/home_rendered/index.html"));
 });
 
 /* This API takes pdf img and txt files from the user and stores them into  */
 app.post("/upload",async (req,res) =>{
     let script_path = path.join(__dirname, "../files/init/files_init");
     await $`${script_path}`;
+    // if (!req.file) {
+    //     return 
+    // }
 });
 
 /* Listening port assumed at 8888 feel free to choose any port */
