@@ -8,6 +8,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 import path from 'path';
+import { $ } from "bun";
 /* Path setup */
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
@@ -24,8 +25,9 @@ app.get("/", (req, res) =>{
 });
 
 /* This API takes pdf img and txt files from the user and stores them into  */
-app.post("/upload",(req,res) =>{
-    
+app.post("/upload",async (req,res) =>{
+    let script_path = path.join(__dirname, "../files/init/files_init");
+    await $`${script_path}`;
 });
 
 /* Listening port assumed at 8888 feel free to choose any port */
